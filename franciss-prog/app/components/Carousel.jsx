@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from 'react';
 import slides from '../json/slides';
 import { nextSlide, prevSlide } from '../functions/carousel'; 
@@ -32,8 +31,8 @@ const Carousel = () => {
             <div className="bg-transparent border dark:border-white w-full h-auto rounded-3xl p-10 flex flex-col items-center ">
               <div className="flex flex-col mt-4 gap-10">
                 <div className='flex flex-row gap-2 items-center text-6xl'> 
-                  <slide.icon className=''/>
-                  <span className="">{slide.title}</span>
+                  <slide.icon/>
+                  <span>{slide.title}</span>
                 </div>
                 <p className='text-2xl'>{slide.description}</p>
                 <div className="flex flex-row gap-5 mt-4 items-center">
