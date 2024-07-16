@@ -23,7 +23,7 @@ const Carousel = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${
+            className={`absolute inset-0 flex flex-col items-center justify-center duration-500 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -36,15 +36,11 @@ const Carousel = () => {
                 <p className='text-2xl'>{slide.description}</p>
                 <div className="flex flex-row gap-5 mt-4 items-center">
                   {/* Use Next.js Link component for client-side navigation */}
-                  <Link href={slide.demoUrl} passHref>
-                    <a className='border px-7 py-3 dark:bg-white bg-[#353839] dark:text-[#353839]'>
+                  <Link href={slide.demo}  className='border px-7 py-3 dark:bg-white bg-[#353839] dark:text-[#353839]' target='_blank'>
                       Live Demo
-                    </a>
                   </Link>
-                  <Link href={slide.srcCode} passHref>
-                    <a className='border border-1 px-7 py-3' target='_blank' rel='noopener noreferrer'>
+                  <Link href={slide.source} className='border border-1 px-7 py-3' target='_blank' >
                       Source Code
-                    </a>
                   </Link>
                 </div>
               </div>
