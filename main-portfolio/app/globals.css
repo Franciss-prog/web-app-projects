@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-::-webkit-scrollbar {
-  display: none;
-}
 .tooltip .tooltiptext {
   @apply invisible dark:bg-[#F8F8FF] dark:text-[#353839] bg-gray-700 text-white text-sm rounded py-2 px-3 absolute z-10 opacity-0 transition-opacity duration-300;
   bottom: 125%; /* Position the tooltip above the text */

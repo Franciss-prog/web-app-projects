@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "main-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "sweetalert2": "^11.12.2"
+    "sweetalert2": "^11.6.13"
   },
   "devDependencies": {
     "eslint": "^8",

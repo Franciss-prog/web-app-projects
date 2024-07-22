@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 const getBrowserInfo = () => {
     const userAgent = navigator.userAgent;
 
-    if (userAgent.indexOf("Brave") > -1) {
+    if (userAgent.indexOf("Brave") > -1) {  
         return "Brave";
     } else if (userAgent.indexOf("Firefox") > -1) {
         return "Firefox";

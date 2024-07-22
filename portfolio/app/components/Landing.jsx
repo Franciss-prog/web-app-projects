@@ -15,7 +15,7 @@ const Landing = () => {
         <div>
             {/* pfp */}
            <div className='flex flex-col justify-center items-center'>
-                <Image src={Logo} />
+                <Image src={Logo} alt='pfp'/>
                 <span className='text-[70px] font-bold'>FRANCISS-PROG</span>
                 <p className='text-3xl'>Frontend Developer</p>
            </div>
