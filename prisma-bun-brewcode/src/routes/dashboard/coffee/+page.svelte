@@ -5,6 +5,7 @@
 	import type { Coffee } from './+page';
 	import Swal from 'sweetalert2';
 	import message from '$lib/utils/message';
+	import { fetchCart } from '$lib/stores/cart';
 	const coffeeData = $page.data.coffeeData;
 
 	const handleAddCart = async (coffee: Coffee) => {
@@ -55,6 +56,7 @@
 					.then((response?) => {
 						if (response?.status === 200) {
 							message(`${coffee.name} successfully added to Cart..`, 'success');
+							fetchCart();
 						}
 					})
 					.catch((error) => {

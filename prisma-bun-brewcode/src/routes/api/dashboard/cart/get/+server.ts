@@ -19,6 +19,5 @@ export const GET = async ({ cookies }) => {
 	} catch (error) {
 		console.log(error);
 	}
-
 	return json({ message: cart }, { status: 200 });
 };

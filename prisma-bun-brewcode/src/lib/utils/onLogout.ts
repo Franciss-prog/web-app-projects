@@ -1,6 +1,8 @@
 import Swal from 'sweetalert2';
 import { goto } from '$app/navigation';
 import axios from 'axios';
+
+
 export const onLogout = async (): Promise<void> => {
 	Swal.fire({
 		title: 'Are you sure you want to Logout?',

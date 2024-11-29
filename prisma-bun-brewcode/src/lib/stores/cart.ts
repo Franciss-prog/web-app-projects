@@ -2,8 +2,8 @@ import { writable } from 'svelte/store';
 import axios from 'axios';
 // Cart item type
 export interface CartItem {
-	id: number;
-	name: string;
+	_id?: number;
+	name?: string;
 	price: number;
 	quantity: number;
 	image: string;

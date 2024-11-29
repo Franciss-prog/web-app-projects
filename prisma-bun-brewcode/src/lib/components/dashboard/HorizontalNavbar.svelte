@@ -3,16 +3,12 @@
 	import { Search, ShoppingBag } from 'lucide-svelte';
 	import { cart, fetchCart } from '$lib/stores/cart';
 	import { onMount } from 'svelte';
-	
-	
-	$:cartData = $cart.length;
 
+	$: cartData = $cart.length;
 
-onMount(async() => {
-	await fetchCart();
-
-
-})
+	onMount(async () => {
+		await fetchCart();
+	});
 </script>
 
 <nav class="flex items-center justify-between pb-5 text-coffee">

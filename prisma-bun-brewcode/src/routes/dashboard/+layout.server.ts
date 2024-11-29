@@ -1,6 +1,5 @@
 import type { LayoutServerLoad } from './$types';
 import {  redirect } from '@sveltejs/kit';
-import axios from 'axios';
 export const load: LayoutServerLoad = async ({ cookies }) => {
 	// cookies validation
 	const token = cookies.get('token');
