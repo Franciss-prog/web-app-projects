@@ -1,5 +1,5 @@
 {
-	"name": "test-prod",
+	"name": "test",
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
@@ -8,8 +8,8 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "eslint . && prettier --check .",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.3",
