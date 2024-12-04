@@ -4,7 +4,7 @@ import americano from '../../../images/americano.png';
 import latte from '../../../images/latte.png';
 import cappuccino from '../../../images/cappuccino.png';
 import macchiato from '../../../images/macchiato.png';
-import mocha from '../../../images/mocha-coffee.png';
+import mocha from '../../../images/mocha.png';
 import type { PageLoad } from './$types';
 
 // svelte
@@ -16,7 +16,7 @@ export interface Coffee {
 	price: number;
 	sizes: string[];
 	image: string;
-	quantity: number;
+	quantity: number ;
 }	
 
 const coffeeData: Coffee[] = [

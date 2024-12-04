@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 import axios from 'axios';
 // Cart item type
 export interface CartItem {
-	_id?: number;
+	_id?: string;
 	name?: string;
 	price: number;
 	quantity: number;
@@ -14,7 +14,7 @@ export const cart = writable<CartItem[]>([]);
 export const fetchCart = async () => {
 	try {
 		const response = await axios.get('/api/dashboard/cart/get');
-		if (response.status === 200) {
+		if (response.status === 200 && Array.isArray(response.data.message)) {
 			cart.set(response.data.message || []);
 		}
 	} catch (error) {

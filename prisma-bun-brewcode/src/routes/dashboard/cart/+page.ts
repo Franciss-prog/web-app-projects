@@ -1,28 +1,22 @@
 import axios from 'axios';
-import type { PageLoad } from './$types';
 import { cart } from '$lib/stores/cart';
-
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async () => {
-	let error = null;
+    let error = null
 	try {
-        const response = await axios.get('/api/dashboard/cart/get')
-
-        // response validation
-        if (response.status === 200 && Array.isArray(response.data.message)) {
-            cart.set(response.data.message || [])
-        }
-		else {
-			console.warn('Unexpected response format:', response.data);
-			cart.set([]); 
+		const response = await axios.get('/api/dashboard/cart/get');
+		if (response.status === 200 && Array.isArray(response.data.message)) {
+			cart.set(response.data.message || []);
 		}
-    } catch (err) {
-        console.error('Failed to fetch cart:', err);
-		cart.set([])
+	} catch (error) {
+		if (axios.isAxiosError(error)) {
+			console.error('Error fetching cart:', error);
+		}
+        error = 'an error occured'
+	}
+    return {
+        cart,
+        error
     }
-
-	return {
-		cart,
-		error
-	};
 };
