@@ -6,7 +6,6 @@ import cappuccino from '../../../images/cappuccino.png';
 import macchiato from '../../../images/macchiato.png';
 import mocha from '../../../images/mocha.png';
 import type { PageLoad } from './$types';
-
 // svelte
 
 export interface Coffee {

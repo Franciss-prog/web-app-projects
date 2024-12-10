@@ -13,15 +13,17 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 	const coffeeQuantity = parseInt(cartData.get('coffeeQuantity') as string);
 	const coffeeImage = cartData.get('coffeeImage') as string;
 
+
+	console.log(coffeePrice);
+	
 	// validate the FormData
 	if (!coffeeName || !coffeePrice || !coffeeQuantity || !coffeeImage) {
 		return json({ message: "Data didn't get" }, { status: 400 });
 	}
-
 	// get the cookies
 	const username = cookies.get('username');
 
-	// find the user in database
+	// find the user in database	
 	const findUser = await User.findOne({ username });
 
 	// if the user is find check the cart if its has a same data
@@ -32,13 +34,14 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 	// find the value on the cart
 	const findSameCart = findUser.cart.find((item: any) => item.name === coffeeName);
 
-	// if has findSameCart is true
 	if (findSameCart) {
-		let { quantity, price } = findSameCart;
-		quantity += coffeeQuantity;
-		price += coffeePrice * findSameCart.quantity;
+		const { quantity, price } = findSameCart; // Destructure for clarityl object
+		findSameCart.price =  coffeePrice 
+		findSameCart.quantity = quantity + coffeeQuantity; // Directly modify the origina
+
+		console.log(price);
+		
 	} else {
-		// if the cart is not in db we're gonna push the cartData
 		findUser.cart.push({
 			name: coffeeName,
 			price: coffeePrice,
@@ -46,6 +49,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 			image: coffeeImage
 		});
 	}
+	
 	// save the user
 	await findUser.save();
 	return json({ message: 'Added To Cart SuccessFully' }, { status: 200 });
