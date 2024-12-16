@@ -1,1 +1,1 @@
-<main>settings</main>
+<main class="h-screen">settings</main>

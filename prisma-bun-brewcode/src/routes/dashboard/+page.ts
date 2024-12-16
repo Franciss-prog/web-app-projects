@@ -1,16 +1,16 @@
 // images
-import espresso from '../../../images/espresso.png';
-import americano from '../../../images/americano.png';
-import latte from '../../../images/latte.png';
-import cappuccino from '../../../images/cappuccino.png';
-import macchiato from '../../../images/macchiato.png';
-import mocha from '../../../images/mocha.png';
-import flatWhite from '../../../images/flatWhite.png';
-import ristretto from '../../../images/ristretto.png';
-import affogato from '../../../images/affogato.png';
-import irishCoffee from '../../../images/irishCoffee.png';
-import cortado from '../../../images/cortado.png';
-import redEye from '../../../images/redEye.png';
+import espresso from '../../images/espresso.png';
+import americano from '../../images/americano.png';
+import latte from '../../images/latte.png';
+import cappuccino from '../../images/cappuccino.png';
+import macchiato from '../../images/macchiato.png';
+import mocha from '../../images/mocha.png';
+import flatWhite from '../../images/flatWhite.png';
+import ristretto from '../../images/ristretto.png';
+import affogato from '../../images/affogato.png';
+import irishCoffee from '../../images/irishCoffee.png';
+import cortado from '../../images/cortado.png';
+import redEye from '../../images/redEye.png';
 import type { PageLoad } from './$types';
 // svelte
 

@@ -9,7 +9,7 @@
 </script>
 
 <nav
-	class={` flex  min-h-screen min-h-auto h-screen w-[120px] flex-col justify-between rounded-r-2xl bg-white px-2 py-10 text-coffee`}
+	class={` flex h-auto w-[120px] flex-col justify-between rounded-r-2xl bg-white px-2 py-10 text-coffee`}
 >
 	<section class={`${flexColumn} gap-10`}>
 		<a href="/dashboard" class="text-3xl" aria-label="Dashboard">B</a>

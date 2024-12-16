@@ -38,7 +38,7 @@
 				class="mt-4 rounded-md bg-coffee px-4 py-2 text-white"
 				on:click={() =>
 					handleAddCart(coffee, () => {
-						coffee.quantity = 0; // Reset input value to 0 after success
+						coffee.quantity = 0; 
 					})
 				}
 			>

@@ -1,2 +1,4 @@
 <script></script>
-<main></main>
+<main class="h-screen">
+    <!--     -->
+</main>
