@@ -1,8 +1,8 @@
 "use client";
-import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Landing from "@/components/Landing";
-import Selling from "@/components/Selling";
+import About from "@/components/root/About";
+import Footer from "@/components/root/Footer";
+import Landing from "@/components/root/Landing";
+import Selling from "@/components/root/Selling";
 import { SectionKeys } from "@/types/type";
 import React, { useRef } from "react";
 export default function Home() {
@@ -27,7 +27,6 @@ export default function Home() {
         break;
       default:
         console.warn(`unhandled Key: ${section}`);
-
         break;
     }
   };

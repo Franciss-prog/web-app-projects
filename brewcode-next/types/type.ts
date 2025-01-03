@@ -1,5 +1,7 @@
 import { RefObject } from "react";
 import { LucideIcon } from "lucide-react";
+import { useRouter } from "next/router";
+const router = useRouter();
 // Define section keys
 export type SectionKeys = "home" | "about" | "selling" | "collab";
 
@@ -7,6 +9,7 @@ export type SectionKeys = "home" | "about" | "selling" | "collab";
 export interface NavbarProps {
   scroll: (section: SectionKeys) => void;
 }
+
 
 // Interface for components that need refs
 export interface RefProps {
@@ -30,4 +33,5 @@ export interface AboutContentProps extends BaseContentProps {
 // Selling Content Props
 export interface SellingContentProps extends BaseContentProps {
   image: string;
+  price: number;
 }

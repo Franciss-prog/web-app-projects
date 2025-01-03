@@ -27,4 +27,26 @@ export const aboutContent: AboutContentProps[] = [
   },
 ];
 
-export const sellingContent: SellingContentProps[] = [];
+export const sellingContent: SellingContentProps[] = [
+  {
+    id: 1,
+    title: "Espresso",
+    description: "Bold and rich, a timeless favorite for coffee lovers.",
+    image: "/images/espresso.png",
+    price: 2.49,
+  },
+  {
+    id: 2,
+    title: "Macchiato",
+    description: "Sweet caramel with a creamy finish, perfect for a treat.",
+    image: "/images/caramel-macchiato.png",
+    price: 3.99,
+  },
+  {
+    id: 3,
+    title: "Americano",
+    description: "Smooth and simple, a classic choice for any time of day.",
+    image: "/images/americano.png",
+    price: 2.99,
+  },
+];

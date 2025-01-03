@@ -1,8 +1,8 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { genSalt, hash } from 'bcrypt-ts';
-import { JWT_SECRET } from '$env/static/private';
 import User from '$lib/database/userSchema';
 import { connectDB } from '$lib/database/connectDB';
+import { JWT_SECRET } from '$env/static/private';
 import jwt from 'jsonwebtoken';
 export const POST: RequestHandler = async ({ request, cookies }) => {
 	// get the data

@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import { MONGODB_URL } from '$env/static/private';
 
+
 export const connectDB = async () => {
     // Check if the database is already connected
     if (mongoose.connection.readyState === 1) {

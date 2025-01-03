@@ -27,10 +27,9 @@ body {
   ::-webkit-scrollbar-track {
     @apply bg-transparent h-20; /* Transparent background for track */
   }
-  
 }
 @media only screen and (max-width: 800px) {
-     /* Scrollbar styling */
+  /* Scrollbar styling */
   ::-webkit-scrollbar {
     @apply hidden; /* Width of the scrollbar */
   }

@@ -1,7 +1,6 @@
 // In your userSchema.ts (or wherever your User schema is defined)
 import { Schema, model, Types } from 'mongoose';
 import { CartItem } from '$lib/stores/cart';
-
 // Define a schema for items in the cart
 const cartItemSchema = new Schema({
 	name: { type: String, required: true },

@@ -4,7 +4,6 @@
 	import { Trash, Pencil } from 'lucide-svelte';
 	import { CircleMinus, CirclePlus } from 'lucide-svelte';
 	import { goto } from '$app/navigation';
-	import Swal from 'sweetalert2';
 	import errorMessage from '$lib/utils/errorMessage';
 	let modifiedStates = new Map<string, boolean>();
 	let originalQuantities = new Map<string, number>();

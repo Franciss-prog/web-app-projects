@@ -1,11 +1,15 @@
-import React, { FC } from "react";
+"use client";
+import React, { FC, useState } from "react";
 import { CodeXml, AlignRight } from "lucide-react";
 import Link from "next/link";
 import { NavbarProps } from "@/types/type";
-
+import { navAuthAlert, navHomeAlert } from "@/utils/alertUtils";
+import { useRouter } from "next/compat/router";
 const Navbar: FC<NavbarProps> = ({ scroll }) => {
+  const router = useRouter(); // router instance
+  console.log(router?.pathname);
   return (
-    <nav className="flex flex-row items-center justify-between px-20 py-10 max-md:px-10 ">
+    <nav className="flex flex-row items-center justify-between px-20 py-10 max-md:px-10">
       {/* logo */}
       <Link href={"/"}>
         <CodeXml />
@@ -35,7 +39,13 @@ const Navbar: FC<NavbarProps> = ({ scroll }) => {
 
       {/* responsive navigations */}
       <section className=" flex-row gap-20 hidden max-md:flex">
-        <button>
+        <button
+          onClick={() => {
+            router?.basePath === "/"
+              ? navHomeAlert("Where are you going?", "Home")
+              : navAuthAlert("Where are you going?", "Auth");
+          }}
+        >
           <AlignRight />
         </button>
       </section>
