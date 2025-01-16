@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CodeXml, ListTree, X } from 'lucide-svelte';
-	import { scrollToSection } from '$lib/utils/scroll';
+	import { scrollToSection } from '$lib/utils/ui/scroll';
 	let openNavLinks: boolean = false;
   
 	const sections = ['home', 'about', 'selling'];

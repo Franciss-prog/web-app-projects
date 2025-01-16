@@ -3,6 +3,7 @@
 	let openNavLinks: boolean = false;
 	const createAccount: string = 'Create an Account';
 	const signIn: string = 'Sign In';
+	import { page } from '$app/state';
 </script>
 
 <nav class="flex flex-row items-center justify-between px-20 py-10 max-md:px-10">
@@ -13,7 +14,7 @@
 		<a href="/auth" class="hover:underline">{signIn}</a>
 		<a
 			href="/auth/register"
-			class="border-1 border border-obsidian p-2 text-obsidian transition-all hover:bg-obsidian hover:text-white"
+			class={`border-1 border border-obsidian p-2 text-obsidian transition-all hover:bg-obsidian hover:text-white ${page.url.pathname === '/auth/register' ? 'bg-obsidian text-white' : ''}`}
 			>{createAccount}</a
 		>
 	</section>

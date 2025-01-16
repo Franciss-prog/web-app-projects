@@ -1,6 +1,6 @@
 <script>
 	import { Instagram, Facebook, Mail, Github } from 'lucide-svelte';
-	import { scrollToSection } from '$lib/utils/scroll';
+	import { scrollToSection } from '$lib/utils/ui/scroll';
 </script>
 
 <footer class="bg-obsidian px-20 py-10 text-white max-md:px-10 max-md:py-2" id="footer">

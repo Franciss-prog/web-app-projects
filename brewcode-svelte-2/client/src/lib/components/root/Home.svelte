@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Navbar from './Navbar.svelte';
-	import { scrollToSection } from '$lib/utils/scroll';
+	import { scrollToSection } from '$lib/utils/ui/scroll';
 	import coffeeImage from '$lib/assets/coffee.png';
 	import { ChevronUp } from 'lucide-svelte';
 </script>

@@ -33,8 +33,16 @@
 		"vite": "^5.4.11"
 	},
 	"dependencies": {
+		"@auth/core": "^0.37.4",
+		"@auth/sveltekit": "^1.7.4",
+		"@simplewebauthn/browser": "^13.0.0",
 		"@sveltejs/adapter-vercel": "^5.5.2",
+		"@types/jsonwebtoken": "^9.0.7",
+		"axios": "^1.7.9",
+		"bcrypt-ts": "^5.0.3",
+		"jsonwebtoken": "^9.0.2",
 		"lucide-svelte": "^0.469.0",
+		"mongoose": "^8.9.3",
 		"sweetalert2": "^11.15.3"
 	}
 }
