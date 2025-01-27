@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { navWidth } from "$lib/utils/ui/widthUtils";
+	import Carousel from '$lib/components/dashboard/Carousel.svelte';
+	import type { PageData } from './$types';
+	let { data }: { data: PageData } = $props();
 </script>
 
-<main class='flex justify-center items-center'>
-	yoo
+<main class=" overflow-hidden px-20 py-10">
+	<Carousel {data} />
 </main>

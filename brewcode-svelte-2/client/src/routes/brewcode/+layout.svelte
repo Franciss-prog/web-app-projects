@@ -1,14 +1,21 @@
 <script lang="ts">
 	import VerticalNavbar from '$lib/components/dashboard/VerticalNavbar.svelte';
 	import HorizontalNavbar from '$lib/components/dashboard/HorizontalNavbar.svelte';
-	import { navWidth } from '$lib/utils/ui/widthUtils'; // w-32
 	let { children } = $props();
 </script>
 
-<main class="flex h-screen flex-1">
+<main class="flex h-screen">
+	<!-- Vertical Navbar -->
 	<VerticalNavbar />
-	<div class={`${navWidth.replace('w-', 'ml-')} flex-col px-20 py-10 flex-1`}>
+
+	<!-- Content Wrapper -->
+	<div class={`ml-[130px] flex flex-1 flex-col px-10 `}>
+		<!-- Horizontal Navbar -->
 		<HorizontalNavbar />
-		{@render children()}
+
+		<!-- Main Content Area -->
+		<div class="flex flex-1 ">
+			{@render children()}
+		</div>
 	</div>
 </main>

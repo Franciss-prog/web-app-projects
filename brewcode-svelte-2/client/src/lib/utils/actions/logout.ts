@@ -1,7 +1,8 @@
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { goto } from '$app/navigation';
-export const onLogout =  async() => {
+
+export const onLogout = async () => {
 	const popup = Swal.fire({
 		title: 'Are you sure you want to Logout? ',
 		showConfirmButton: true,
@@ -13,10 +14,8 @@ export const onLogout =  async() => {
 		}
 	});
 
-	
-    if ((await popup).isConfirmed) {
-        await axios.post("/api/logout");
-
-        return goto('/auth')
-    }
+	if ((await popup).isConfirmed) {
+		await axios.post('/api/logout');
+		return goto('/auth');
+	}
 };

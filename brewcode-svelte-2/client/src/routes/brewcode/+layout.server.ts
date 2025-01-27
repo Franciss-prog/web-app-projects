@@ -1,16 +1,16 @@
 import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
-
 export const load: LayoutServerLoad = async ({ locals, cookies }) => {
-	const session = await locals.auth();
-	const auth = cookies.get('jwtCookie') || session;
+	const session = (await locals.auth()) ?? null;
+	const jwtCookies = cookies.get('jwtCookie') as string;
 
+	const auth = session || jwtCookies;
 	if (!auth) {
-		throw redirect(303, '/auth');
+		throw redirect(307, '/auth');
 	}
 
 	return {
 		session,
-		jwt: cookies.get('jwtCookie')	
+		jwt: jwtCookies
 	};
 };

@@ -42,15 +42,15 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 
 		// set the cookies
 		cookies.set('jwtCookie', token, {
-			path: '/',
-			expires: new Date(Date.now() + 86400 * 1000),
-			httpOnly: true,
-			maxAge: 3600,
-			secure: false // chage in prod
-		});
-	} catch (error) {
-		return json({ message: 'An error occurred' }, { status: 500 });
-	}
+      path: '/brewcode',
+      expires: new Date(Date.now() + 86400 * 1000),
+      httpOnly: true,
+      maxAge: 3600,
+      secure: false // chage in prod
+    });
+  } catch (error) {
+    return json({ message: 'An error occurred' }, { status: 500 });
+  }
 
 	return json(
 		{

@@ -40,7 +40,7 @@
 				<div class="flex w-full flex-row items-center justify-between gap-3 px-2 max-md:px-0">
 					<!-- Button Link -->
 					<a
-						href="/auth"
+						href="/brewcode/coffee"
 						class="w-fit rounded-2xl bg-obsidian px-7 py-2 font-bold text-softMist max-lg:px-4 max-lg:py-1 max-md:px-3 max-sm:px-2 max-sm:py-1 max-sm:text-xs"
 					>
 						Buy {title}
