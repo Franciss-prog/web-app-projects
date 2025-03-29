@@ -13,7 +13,7 @@ import { FaRegUserCircle } from "react-icons/fa";
         source: "https://github.com/Franciss-prog/web-app-projects/tree/main/Listify",
     },{
         id: 2,
-        title: "Login Authentication",
+        title: "Register Authentication",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At risus viverra adipiscing at in. ",
         icon: FaRegUserCircle,
         demo: "https://next-login-authentication.vercel.app/",
