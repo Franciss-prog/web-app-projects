@@ -1,16 +1,17 @@
 @import "tailwindcss";
-body{
-    font-family: "Michroma", sans-serif;
+body {
+  font-family: "Michroma", sans-serif;
 }
+
 @font-face {
-    font-family: "Stardock";
-    src: url("/Stardock.ttf") format("truetype");
+  font-family: "stardock";
+  src: url("/fonts/Stardock.ttf") format("truetype");
 }
-@theme{
-    --color-white: #f6f5fa;
-    --color-black: #2f2e2c;
-    --font-stardock: "Stardock";
+@theme {
+  --color-white: #f6f5fa;
+  --color-black: #2f2e2c;
+  --font-stardock: "stardock";
 }
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
